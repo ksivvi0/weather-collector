@@ -1,8 +1,10 @@
 package services
 
-import "context"
+import (
+	"context"
+	"weather-collector/internal/models"
+)
 
 type Sourcer interface {
-	//TODO: set return values
-	Collect(ctx context.Context) error
+	Collect(ctx context.Context) (*models.Forecast, error)
 }
